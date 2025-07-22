@@ -1,11 +1,9 @@
-import { getAllProducts } from "../../data";
 import SingleProduct from "./SingleProduct";
 
-const Products = ({ handleProducts, cartProducts }) => {
-  const allProducts = getAllProducts();
+const Products = ({ handleProducts, cartProducts, sortedProducts }) => {
   return (
     <div class="product-grid">
-      {allProducts.map((product) => (
+      {sortedProducts.map((product) => (
         <SingleProduct
           key={product.id}
           product={product}
