@@ -1,0 +1,78 @@
+const products = [
+  {
+    id: crypto.randomUUID(),
+    image: "image 1.png",
+    name: "Gradient Graphic T-shirt",
+    remaining: 5,
+    rating: 5,
+    price: 140,
+    date: "2025-07-10",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 10-1.png",
+    name: "Polo with Tipping Details",
+    remaining: 10,
+    rating: 4,
+    price: 160,
+    date: "2025-07-15",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 10-2.png",
+    name: " Skinny Fit Jeans",
+    remaining: 3,
+    rating: 5,
+    price: 180,
+    date: "2025-07-12",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 7-1.png",
+    name: "Solid Color T-Shirt",
+    remaining: 20,
+    rating: 3,
+    price: 130,
+    date: "2025-07-17",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 8-2.png",
+    name: "Checkered Shirt",
+    remaining: 15,
+    rating: 5,
+    price: 240,
+    date: "2025-07-18",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 8.png",
+    name: "Sleeve Striped T-shirt",
+    remaining: 4,
+    rating: 4,
+    price: 170,
+    date: "2025-07-20",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 9-1.png",
+    name: "Vertical Striped Shirt",
+    remaining: 8,
+    rating: 5,
+    price: 140,
+    date: "2025-07-21",
+  },
+  {
+    id: crypto.randomUUID(),
+    image: "image 9-2.png",
+    name: "Courage Graphic T-shirt",
+    remaining: 5,
+    rating: 5,
+    price: 140,
+    date: "2025-07-19",
+  },
+];
+
+export const getAllProducts = () => {
+  return products;
+};
