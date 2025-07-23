@@ -1,7 +1,13 @@
 import { getImageUrl } from "../../utils/product-utils";
 import OrderSummary from "./OrderSummary";
 
-const ProductCart = ({ cartProducts, handleProducts }) => {
+const ProductCart = ({
+  cartProducts,
+  handleProducts,
+  productQnt,
+  setProductQnt,
+  handleProductCount,
+}) => {
   return (
     <div class="lg:col-span-1">
       <div class="bg-white rounded-lg p-6 border border-gray-200">
@@ -13,7 +19,10 @@ const ProductCart = ({ cartProducts, handleProducts }) => {
           </p>
         ) : (
           cartProducts.map((product) => (
-            <div class="flex items-start space-x-4 pb-4 border-b border-gray-200 mb-4">
+            <div
+              key={product.id}
+              class="flex items-start space-x-4 pb-4 border-b border-gray-200 mb-4"
+            >
               <div class="w-16 h-16 bg-gray-100 rounded flex-shrink-0 flex items-center justify-center">
                 <img
                   src={getImageUrl(product.image)}
@@ -34,11 +43,23 @@ const ProductCart = ({ cartProducts, handleProducts }) => {
                 <div class="flex justify-between items-center mt-2">
                   <p class="font-bold">${product.price}</p>
                   <div class="flex items-center space-x-2">
-                    <button class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center">
+                    <button
+                      onClick={() =>
+                        handleProductCount("decrement", product.id)
+                      }
+                      disabled={product.quantity === 1}
+                      class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center"
+                    >
                       −
                     </button>
-                    <span class="text-sm">1</span>
-                    <button class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center">
+                    <span class="text-sm">{product.quantity}</span>
+                    <button
+                      onClick={() =>
+                        handleProductCount("increment", product.id)
+                      }
+                      disabled={product.stock === product.quantity}
+                      class="w-6 h-6 bg-gray-100 rounded flex items-center justify-center"
+                    >
                       +
                     </button>
                   </div>

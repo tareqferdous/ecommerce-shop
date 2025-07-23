@@ -27,9 +27,7 @@ const SingleProduct = ({ product, handleProducts, cartProducts }) => {
             </div>
             <span class="text-xs text-gray-500 ml-1">4/5</span>
           </div>
-          <span class="text-xs text-gray-700">
-            ({product.remaining} pcs left)
-          </span>
+          <span class="text-xs text-gray-700">({product.stock} pcs left)</span>
         </div>
         <p class="font-bold">${product.price} </p>
         {isAddedToCart ? (
