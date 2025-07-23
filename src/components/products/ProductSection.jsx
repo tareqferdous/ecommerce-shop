@@ -7,7 +7,6 @@ import Products from "./Products";
 const ProductSection = () => {
   const [cartProducts, setCartProducts] = useState([]);
   const [sortProducts, setSortProducts] = useState("popular");
-
   const productLists = getAllProducts();
   const [allProducts, setAllProducts] = useState(productLists);
 

@@ -1,13 +1,7 @@
 import { getImageUrl } from "../../utils/product-utils";
 import OrderSummary from "./OrderSummary";
 
-const ProductCart = ({
-  cartProducts,
-  handleProducts,
-  productQnt,
-  setProductQnt,
-  handleProductCount,
-}) => {
+const ProductCart = ({ cartProducts, handleProducts, handleProductCount }) => {
   return (
     <div class="lg:col-span-1">
       <div class="bg-white rounded-lg p-6 border border-gray-200">
@@ -69,7 +63,7 @@ const ProductCart = ({
           ))
         )}
 
-        <OrderSummary />
+        <OrderSummary cartProducts={cartProducts} />
       </div>
     </div>
   );
