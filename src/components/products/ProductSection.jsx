@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context";
 import { getAllProducts } from "../../data";
 import ProductCart from "./ProductCart";
 import ProductHeader from "./ProductHeader";
 import Products from "./Products";
 
 const ProductSection = () => {
-  const [cartProducts, setCartProducts] = useState([]);
   const [sortProducts, setSortProducts] = useState("popular");
   const productLists = getAllProducts();
   const [allProducts, setAllProducts] = useState(productLists);
+  const { cartProducts, setCartProducts } = useContext(CartContext);
 
   const handleProducts = (product) => {
     const found = cartProducts.find((prod) => prod.id === product.id);
