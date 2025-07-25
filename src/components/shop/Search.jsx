@@ -1,15 +1,15 @@
 const Search = () => {
   return (
-    <div class="relative hidden md:block w-64">
+    <div className="relative hidden md:block w-64">
       <input
         type="text"
         placeholder="Search for products..."
-        class="w-full bg-gray-100 rounded-full py-2 px-4 text-sm"
+        className="w-full bg-gray-100 rounded-full py-2 px-4 text-sm"
       />
-      <span class="absolute right-3 top-2">
+      <span className="absolute right-3 top-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 text-gray-400"
+          className="h-5 w-5 text-gray-400"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

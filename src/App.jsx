@@ -1,14 +1,12 @@
-import { useState } from "react";
 import "./App.css";
 import Shop from "./components/shop/Shop";
-import { CartContext } from "./context";
+import { ProductProvider } from "./context/ProductContext";
 
 function App() {
-  const [cartProducts, setCartProducts] = useState([]);
   return (
-    <CartContext.Provider value={{ cartProducts, setCartProducts }}>
+    <ProductProvider>
       <Shop />
-    </CartContext.Provider>
+    </ProductProvider>
   );
 }
 

@@ -2,33 +2,33 @@ import Search from "./Search";
 
 const Header = () => {
   return (
-    <header class="border-b border-gray-200 py-4 px-4 md:px-8">
-      <div class="container mx-auto flex items-center justify-between">
-        <a href="#" class="text-2xl font-bold">
+    <header className="border-b border-gray-200 py-4 px-4 md:px-8">
+      <div className="container mx-auto flex items-center justify-between">
+        <a href="#" className="text-2xl font-bold">
           LWS.SHOP
         </a>
 
-        <nav class="hidden md:flex space-x-6">
-          <a href="#" class="hover:text-gray-500 transition-colors">
+        <nav className="hidden md:flex space-x-6">
+          <a href="#" className="hover:text-gray-500 transition-colors">
             Shop
           </a>
-          <a href="#" class="hover:text-gray-500 transition-colors">
+          <a href="#" className="hover:text-gray-500 transition-colors">
             On Sale
           </a>
-          <a href="#" class="hover:text-gray-500 transition-colors">
+          <a href="#" className="hover:text-gray-500 transition-colors">
             New Arrivals
           </a>
-          <a href="#" class="hover:text-gray-500 transition-colors">
+          <a href="#" className="hover:text-gray-500 transition-colors">
             Brands
           </a>
         </nav>
 
-        <div class="flex items-center space-x-4">
+        <div className="flex items-center space-x-4">
           <Search />
-          <a href="#" class="hover:text-gray-500 transition-colors">
+          <a href="#" className="hover:text-gray-500 transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -42,10 +42,10 @@ const Header = () => {
             </svg>
           </a>
 
-          <a href="#" class="hover:text-gray-500 transition-colors">
+          <a href="#" className="hover:text-gray-500 transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

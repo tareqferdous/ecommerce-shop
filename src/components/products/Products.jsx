@@ -2,7 +2,7 @@ import SingleProduct from "./SingleProduct";
 
 const Products = ({ handleProducts, cartProducts, sortedProducts }) => {
   return (
-    <div class="product-grid">
+    <div className="product-grid">
       {sortedProducts.map((product) => (
         <SingleProduct
           key={product.id}
